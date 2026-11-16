@@ -32,15 +32,20 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //OnClick asignado desde el Layout
-    //En vez de butonBusca.setOnClickListener...
     public void buscaPaciente(View view) {
-        //Recupero la cadena de texto del EditText
-        String nuhsa= ETnuhsa.getText().toString();
-        //Voy a lanzar la activity BuscaActivity con  el parámetro del nuhsa recuperado mediante putExtra
+        // Recupero la cadena de texto del EditText quitando espacios en blanco
+        String nuhsa = ETnuhsa.getText().toString().trim();
 
-        Intent intent=new Intent(MainActivity.this,BuscaActivity.class);
-        intent.putExtra(Constantes.nuhsa,nuhsa);
+        // Si está vacío, aviso al usuario y corto la ejecución aquí mismo
+        if (nuhsa.isEmpty()) {
+            ETnuhsa.setError("Introduce un NUHSA");
+            Toast.makeText(this, "Debes escribir un NUHSA para buscar", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Solo si hay texto, lanzo BuscaActivity
+        Intent intent = new Intent(MainActivity.this, BuscaActivity.class);
+        intent.putExtra(Constantes.nuhsa, nuhsa);
         startActivity(intent);
     }
     //OnClick asignado desde el Layout
@@ -68,6 +73,11 @@ public class MainActivity extends AppCompatActivity {
                 Constantes.apellido[random.nextInt(8)]+" "+Constantes.apellido[random.nextInt(8)],
                 grupo,
                 nuhsa));
+    }
+
+    public void listarPacientes(View view) {
+        Intent intent = new Intent(MainActivity.this, ListaPacientesActivity.class);
+        startActivity(intent);
     }
 
 }
