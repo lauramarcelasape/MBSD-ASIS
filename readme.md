@@ -1,6 +1,6 @@
 # 🏥 Master Salud - Gestión de Pacientes con Firebase
 
-Aplicación nativa desarrollada en **Android (Java)** para la práctica **PR5 de Aplicaciones para Sistemas**. Implementa operaciones CRUD completas (Crear, Leer, Actualizar y Eliminar) conectadas en tiempo real a **Firebase Realtime Database**.
+Aplicación nativa desarrollada en **Android (Java)** para la práctica **PR5 de 202627-Aplicaciones para Sistemas de Información Sanitaria y Dispositivos Móviles**. Implementa operaciones CRUD completas (Crear, Leer, Actualizar y Eliminar) conectadas en tiempo real a **Firebase Realtime Database**.
 
 ---
 
@@ -66,4 +66,4 @@ app/src/main/
 
 ## 📄 Licencia
 
-Proyecto desarrollado con fines académicos para la asignatura de Aplicaciones para Sistemas.
+Proyecto desarrollado con fines académicos para la asignatura de 202627-Aplicaciones para Sistemas de Información Sanitaria y Dispositivos Móviles.
